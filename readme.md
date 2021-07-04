@@ -29,7 +29,7 @@ Results are displayed in command line console using a logger.
 
 
 # Assumptions
-- Data is received in the form of:
+- Data is received in the form of (hardcoded in application):
   
         Number inputDiscount = 100;
         List<Number> inputProducts = Arrays.asList(500, 1500);
