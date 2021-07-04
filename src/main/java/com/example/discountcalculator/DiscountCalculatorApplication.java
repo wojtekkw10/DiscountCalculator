@@ -32,9 +32,10 @@ public class DiscountCalculatorApplication {
                                                InputDataValidator inputDataValidator,
                                                DiscountCalculator discountCalculator) {
         this.discountCalculator = discountCalculator;
+
         //INPUT DATA =============================================
         Number inputDiscount = 100;
-        List<Number> inputProducts = Arrays.asList(500, 1500);
+        List<Number> inputProducts = Arrays.asList(300, 300, 300);
         //INPUT DATA ==============================================
 
         return args -> {
