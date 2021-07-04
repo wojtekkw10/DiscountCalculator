@@ -16,9 +16,6 @@ public class InputDataValidator {
         if(products == null){
             throw new IllegalArgumentException("Product list is null");
         }
-        else if(products.isEmpty()) {
-            throw new IllegalArgumentException("Product list is empty");
-        }
         else if(products.size() > productLimit) {
             throw new TooManyProductsException();
         }
