@@ -45,4 +45,18 @@ class DiscountCalculatorTest {
         Assertions.assertTrue(result.containsValue(Money.of(25, currencyUnit)));
     }
 
+    @Test
+    void shouldReturnProportionalDiscountsWithRemainder(){
+        Number inputDiscount = 100;
+        List<Number> inputProducts = Arrays.asList(100, 100, 100);
+        Money discount = Money.of(inputDiscount, currencyUnit);
+        List<Product> products =  inputProducts.stream()
+                .map(cost -> new Product(Money.of(cost, currencyUnit))).collect(Collectors.toList());
+
+        Map<Product, Money> result = discountCalculator.determineDiscounts(products, discount);
+
+        Assertions.assertTrue(result.containsValue(Money.of(33.33, currencyUnit)));
+        Assertions.assertTrue(result.containsValue(Money.of(33.34, currencyUnit)));
+    }
+
 }
