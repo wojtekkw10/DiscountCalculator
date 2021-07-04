@@ -42,7 +42,7 @@ In case we need 2 different algorithms the interface is easily extractable.
 # Run application:
     ./gradlew bootRun
 # Run tests
-    /gradlew test
+    ./gradlew test
 
 
 
