@@ -1,4 +1,4 @@
-# Discount Calculator module
+# Discount Calculator
 It is responsible for calculating discounts proportionally for given discount amount.
 E.g <br>
 Input data: <br>
